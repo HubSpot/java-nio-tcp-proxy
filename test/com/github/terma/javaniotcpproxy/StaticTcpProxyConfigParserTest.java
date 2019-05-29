@@ -16,17 +16,18 @@ Copyright 2012 Artem Stasuk
 
 package com.github.terma.javaniotcpproxy;
 
-import junit.framework.Assert;
-import org.junit.Before;
-import org.junit.Rule;
-import org.junit.Test;
-import org.junit.rules.ExpectedException;
-
 import java.net.URISyntaxException;
 import java.util.Collections;
 import java.util.Comparator;
 import java.util.List;
 import java.util.Properties;
+
+import org.junit.Before;
+import org.junit.Rule;
+import org.junit.Test;
+import org.junit.rules.ExpectedException;
+
+import junit.framework.Assert;
 
 public class StaticTcpProxyConfigParserTest {
 
@@ -52,7 +53,7 @@ public class StaticTcpProxyConfigParserTest {
         Collections.sort(instances, new Comparator<TcpProxyConfig>() {
             @Override
             public int compare(TcpProxyConfig o1, TcpProxyConfig o2) {
-                return o2.getRemoteHost().compareTo(o1.getRemoteHost());
+                return o1.getRemoteHost().compareTo(o2.getRemoteHost());
             }
         });
 

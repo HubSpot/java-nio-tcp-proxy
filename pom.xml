@@ -5,7 +5,7 @@
   <parent>
     <groupId>com.hubspot</groupId>
     <artifactId>basepom</artifactId>
-    <version>25.3</version>
+    <version>25.4</version>
   </parent>
 
   <groupId>com.github.terma</groupId>
@@ -18,9 +18,6 @@
   <properties>
     <project.build.targetJdk>1.6</project.build.targetJdk>
     <project.build.releaseJdk>6</project.build.releaseJdk>
-
-    <dep.mockito.version>2.23.4</dep.mockito.version>
-    <dep.objenesis.version>2.6</dep.objenesis.version>
   </properties>
 
   <dependencies>
@@ -39,20 +36,6 @@
   <build>
     <sourceDirectory>src</sourceDirectory>
     <testSourceDirectory>test</testSourceDirectory>
-    <pluginManagement>
-      <plugins>
-        <plugin>
-          <groupId>org.basepom.maven</groupId>
-          <artifactId>duplicate-finder-maven-plugin</artifactId>
-          <configuration>
-            <ignoredClassPatterns>
-              <!-- Can remove once https://github.com/basepom/duplicate-finder-maven-plugin/issues/33 is fixed -->
-              <ignoredClassPattern>^META-INF.versions.9.module-info$</ignoredClassPattern>
-            </ignoredClassPatterns>
-          </configuration>
-        </plugin>
-      </plugins>
-    </pluginManagement>
   </build>
 
   <licenses>
